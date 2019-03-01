@@ -1,0 +1,60 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+	font-family: Cursive, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+	background-color: #f5f6fa;
+}
+
+header {
+  background: #01a3a4;
+  color:#ffffff;
+  padding: 1rem;
+  height: 10vh;
+}
+
+#heading {
+  margin: 0.2rem;
+  overflow: hidden;
+}
+
+#sign-design {
+  float: right;
+  margin-top: 0.9rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0;
+}
+
+#sign-design a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #34495e;
+  font-family: sans-serif, Helvetica, serif;
+  font-weight: bold;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#sign-design a:hover {
+  color: white;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px grey;
+} 
+
+
+header h1 {
+  display: inline;
+  padding: 0.6rem;
+  color: #f1f2f6;
+  font-family: cursive, sans-serif;
+  font-size: 2rem;
+   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#logo-design {
+  color: #34495e;
+}
