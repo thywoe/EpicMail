@@ -58,3 +58,99 @@ header h1 {
 #logo-design {
   color: #34495e;
 }
+
+#content {
+  width: 80vw;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 1rem;
+  padding: 1rem;
+
+ }  
+
+.message {
+  color: #57606f;
+  font-style: italic;
+  font-size: 0.7rem;
+  text-align: center;
+   text-shadow: -1px 0 black, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+ #signup {
+  border: 2px solid #f5f6fa;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  min-height: 50vh;
+  background-color: #2f3542;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px grey;
+ }
+
+ #signup h3 {
+  font-weight: bolder;
+  font-size: 40px;
+  color: #f5f6fa;
+  margin-top: 5px;
+  text-shadow: 2px 2px black;
+}
+
+#signup input[type='text'], input[type='password'], input[type='email'] {
+  width: 90%;
+  padding:10px;
+  border:0;
+  border-bottom:2px solid #81ecec;
+  border-radius: 15px;
+  outline: none;
+  background-color: #ffffff;
+}
+
+
+::placeholder {
+  color: #130f40; 
+}
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder { 
+ color: #130f40;
+}
+/* Microsoft Edge */
+::-ms-input-placeholder { 
+ color: #130f40;
+}
+
+#btn {
+  background-color: #01a3a4;
+  width: 70%;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-style: italic;
+  outline: none;
+
+}
+
+#btn:hover {
+  border: none;
+  box-shadow: 5px 5px 3px black;
+
+}
+
+#signup a {
+  color: #ff4757;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+#signup a:hover {
+  
+  font-size: 1rem;
+}
+
+hr.line {
+  border-bottom: 1px solid #b2bec3;
+}
