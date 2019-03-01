@@ -107,6 +107,39 @@ header h1 {
   background-color: #ffffff;
 }
 
+/*Login --start*/
+ #signup1 {
+  border: 2px solid #f5f6fa;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  min-height: 30vh;
+  background-color: #2C3A47;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px grey;
+ }
+
+ #signup1 a {
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+  border: none;
+}
+
+#signup1 a:hover {
+  color: #e74c3c;
+}
+
+
+ #content1 {
+  width: 80vw;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 6rem;
+ }   
+ /*Login --end*
 
 ::placeholder {
   color: #130f40; 
