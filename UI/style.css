@@ -1,0 +1,216 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+	font-family: Cursive, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+	background-color: #f5f6fa;
+}
+
+header {
+  background: #01a3a4;
+  color:#ffffff;
+  padding: 1rem;
+  height: 10vh;
+}
+
+#heading {
+  margin: 0.2rem;
+  overflow: hidden;
+}
+
+#sign-design {
+  float: right;
+  margin-top: 0.9rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0;
+}
+
+#sign-design a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #34495e;
+  font-family: sans-serif, Helvetica, serif;
+  font-weight: bold;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#sign-design a:hover {
+  color: white;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px grey;
+} 
+
+
+header h1 {
+  display: inline;
+  padding: 0.6rem;
+  color: #f1f2f6;
+  font-family: cursive, sans-serif;
+  font-size: 2rem;
+   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#logo-design {
+  color: #34495e;
+}
+
+#content {
+  width: 80vw;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 1rem;
+  padding: 1rem;
+
+ }  
+
+.message {
+  color: #57606f;
+  font-style: italic;
+  font-size: 0.7rem;
+  text-align: center;
+   text-shadow: -1px 0 black, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+ #signup {
+  border: 2px solid #f5f6fa;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  min-height: 50vh;
+  background-color: #2f3542;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px grey;
+ }
+
+ #signup h3 {
+  font-weight: bolder;
+  font-size: 40px;
+  color: #f5f6fa;
+  margin-top: 5px;
+  text-shadow: 2px 2px black;
+}
+
+#signup input[type='text'], input[type='password'], input[type='email'] {
+  width: 90%;
+  padding:10px;
+  border:0;
+  border-bottom:2px solid #81ecec;
+  border-radius: 15px;
+  outline: none;
+  background-color: #ffffff;
+}
+
+
+::placeholder {
+  color: #130f40; 
+}
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder { 
+ color: #130f40;
+}
+/* Microsoft Edge */
+::-ms-input-placeholder { 
+ color: #130f40;
+}
+
+#btn {
+  background-color: #01a3a4;
+  width: 70%;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-style: italic;
+  outline: none;
+
+}
+
+#btn:hover {
+  border: none;
+  box-shadow: 5px 5px 3px black;
+
+}
+
+#signup a {
+  color: #ff4757;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+#signup a:hover {
+  
+  font-size: 1rem;
+}
+
+hr.line {
+  border-bottom: 1px solid #b2bec3;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+@media screen and (min-width: 900px) {
+ .message {
+  margin-top: 180px;
+  font-size: 40px;
+ }
+
+header h1 {
+  font-size: 2.5vw;
+}
+
+#signup1 {
+  width: 35vw;
+}
+
+#content1 {
+  width: 40vw;
+}
+} 
