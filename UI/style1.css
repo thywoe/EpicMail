@@ -63,3 +63,14 @@ body {
 #compose a{
   color: #ED4C67;
 }
+
+/*open button*/
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  color: #2f3542;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
