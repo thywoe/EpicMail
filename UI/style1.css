@@ -165,9 +165,6 @@ body {
   color: #ff5e57;
 }
 
-#adminbdy {
-  background-color: #227093;
-}
 .admin {
   text-align: center;
   margin-top: 70px;
@@ -177,10 +174,12 @@ body {
   border-radius: 10px;
   border: none;
   border-bottom: 1px solid #c23616;
+  box-shadow: 5px 5px 4px grey;
 }
 
 .admin input[type='text']:focus {
   border: 1px solid #44bd32;
+  box-shadow: 5px 5px 4px grey;
 }
 
 
