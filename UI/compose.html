@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER MAIL ACCOUNT</title>
+    <link rel="stylesheet" type="text/css" href="./style1.css">
+ </head>
+ <body>
+ 	<div id="mySidebar" class="sidebar">
+ 		<div id='center'>
+ 		<h2>EPIC MAIL</h2>
+ 		<div id='compose'><a href="#">Compose</a></div>
+ 		</div><br><hr>
+  <a href="#" class="closebtn" id="closebar">×</a>
+  <div class='bar'>
+  <a href="#">Inbox</a>
+  <a href="#">Sent</a>
+  <a href="#">Draft</a>
+  </div><hr>
+ 
+  <a href="#">Create Group</a>
+</div>
+
+<div id="main">
+  <button class="openbtn composebtn" id="openbar">☰ COMPOSE</button>  
+</div><hr>
+
+<div id="composeMsg">
+<form>
+<label>From:</label><input type='email' required><br>
+<label>To:</label><input type='email' required><br>
+<select>
+  <option value="select group">Select Group</option>
+  <option value="group1">Group1</option>
+  <option value="group2">Group2</option>
+  <option value="group3">Group3</option>
+</select><br>
+<input type='text' placeholder='Subject'><br>
+<textarea name='message' placeholder='compose email' rows='20' cols="46"></textarea><br>
+<button class='button composebtn'>Send</button>
+</form>
+</div>
+
+</body>
+<script type="text/javascript" src='./mail.js'></script>
+</html>
