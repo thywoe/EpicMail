@@ -159,6 +159,30 @@ body {
   color: #ffffff;
 }
 
+/*admin openbtn*/
+.adminbtn {
+  background-color: #f5f6fa;
+  color: #ff5e57;
+}
+
+#adminbdy {
+  background-color: #227093;
+}
+.admin {
+  text-align: center;
+  margin-top: 70px;
+}
+.admin input[type='text'] {
+  width: 60%;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 1px solid #c23616;
+}
+
+.admin input[type='text']:focus {
+  border: 1px solid #44bd32;
+}
+
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
