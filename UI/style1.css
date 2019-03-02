@@ -206,6 +206,11 @@ body {
   box-shadow: 5px 5px 4px grey;
 }
 
+.admin select {
+  width: 30%;
+  outline: none;
+  border-radius: 5px;
+}
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
