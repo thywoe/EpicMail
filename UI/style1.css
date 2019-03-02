@@ -60,8 +60,20 @@ body {
   border-radius: 15px;
 }
 
+#compose:hover {
+  box-shadow: 8px 8px 6px grey;
+}
+
 #compose a{
   color: #ED4C67;
+}
+
+#compose a:hover {
+  color: white;
+  
+  outline: none;
+  border: none;
+  text-decoration: none;
 }
 
 /*open button*/
@@ -163,6 +175,18 @@ body {
 .adminbtn {
   background-color: #f5f6fa;
   color: #ff5e57;
+}
+
+#cg-bar a{
+  color: #ecf0f1;
+  font-family: sans-serif;
+}
+
+#cg-bar a:hover {
+  font-family: cursive;
+  background-color: #33d9b2;
+  color: #2c3e50;
+  border-left: 6px solid white;
 }
 
 .admin {
