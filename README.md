@@ -1,9 +1,9 @@
-##EpicMail
+## EpicMail
 EpicMail a Web Application that allows User Write,Send, Save and Delete Email messages.
 
-#Getting Started
+# Getting Started
 
-#Required Features
+# Required Features
 * Users can sign up.
 * Users can login.
 * Users can create groups.
@@ -13,7 +13,7 @@ EpicMail a Web Application that allows User Write,Send, Save and Delete Email me
 * Users can save an email as draft and send it later or delete it.
 * Users can reset password.
 
-#Create with
+# Create with
 * HTML
 * CSS
 * Javascript
