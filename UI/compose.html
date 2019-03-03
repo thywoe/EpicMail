@@ -14,12 +14,16 @@
  		</div><br><hr>
   <a href="#" class="closebtn" id="closebar">×</a>
   <div class='bar'>
-  <a href="#">Inbox</a>
-  <a href="#">Sent</a>
-  <a href="#">Draft</a>
+  <a href="inbox.html">Inbox</a>
+  <a href="sent.html">Sent</a>
+  <a href="draft.html">Draft</a>
   </div><hr>
- 
-  <a href="#">Create Group</a>
+  <div id='cg-bar'>
+  <a href="admin.html">Create Group</a>
+</div>
+<div id='lg-bar'>
+  <a href="login.html">LOGOUT</a>
+</div>
 </div>
 
 <div id="main">
@@ -28,8 +32,9 @@
 
 <div id="composeMsg">
 <form>
-<label>From:</label><input type='email' required><br>
 <label>To:</label><input type='email' required><br>
+<label>Cc:</label><input type='email' required><br>
+<label>Bcc:</label><input type='email' required><br>
 <select>
   <option value="select group">Select Group</option>
   <option value="group1">Group1</option>
