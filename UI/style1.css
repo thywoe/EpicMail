@@ -146,6 +146,7 @@ body {
 #composeMsg textarea {
   width: 100%;
   border: 1px solid grey;
+  outline: none;
 }
 
 .button {
@@ -210,6 +211,22 @@ body {
   width: 30%;
   outline: none;
   border-radius: 5px;
+}
+
+#lg-bar {
+  margin-top: 150px;
+}
+
+#lg-bar a{
+  color: #2c3e50;
+  font-family: sans-serif;
+}
+
+#lg-bar a:hover {
+  font-family: cursive;
+  background-color: #33d9b2;
+  color: #ecf0f1;
+  border-left: 6px solid #2c3e50;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
