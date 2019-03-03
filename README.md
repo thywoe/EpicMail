@@ -19,3 +19,4 @@ EpicMail a Web Application that allows User Write,Send, Save and Delete Email me
 * Javascript
 
 # GitHub Pages Link:
+https://thywoe.github.io/EpicMail/UI/index.html
