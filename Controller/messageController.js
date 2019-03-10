@@ -3,7 +3,7 @@ import mail from "../Model/db";
 class MessageController {
 
     createMessage(req, res) {
-        if (!req.body.subject && !req.body.message) {
+        if (!req.body.subject || !req.body.message) {
             return res.status(400).send({
               status: 400,
               error: 'All fields are required',
