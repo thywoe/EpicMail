@@ -37,6 +37,19 @@ describe("EpicMail Endpoints", () => {
 					done();
 					});
 		});
+    });
+    
+
+    describe("GET /api/v1/messages/sent", () => {
+		it("should get all sent messages", (done) => {
+			chai.request(app)
+				.get('/api/v1/messages/sent')
+				.end((err, res) => {
+					res.should.have.status(200);
+					res.body.should.be.a('object');
+					done();
+					});
+		});
 	});
 
 
