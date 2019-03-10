@@ -8,5 +8,6 @@ router.use(bodyParser.urlencoded({ extended: false}));
 
 router.post('/api/v1/messages', messageController.createMessage);
 router.get('/api/v1/messages', messageController.getAllMessages);
+router.get('/api/v1/messages/sent', messageController.getAllMessages);
 
 export default router;
