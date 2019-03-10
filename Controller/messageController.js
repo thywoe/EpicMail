@@ -29,7 +29,22 @@ class MessageController {
             status: 200,
             data: mail["messages"],
           });
-        }  
+        }
+        
+    getMessage(req, res) {
+          const id = parseInt(req.params.id, 10);
+          const message = mail["messages"].find(message => message.id === id);
+          if(message){return res.status(200).send({
+            status: 200,
+            data: message
+          }
+          )};
+            return res.status(400).send({
+            status: 400,
+            error: 'message does not exist',
+          });
+        }
+      
 
 
 
