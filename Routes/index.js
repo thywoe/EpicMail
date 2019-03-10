@@ -10,6 +10,7 @@ router.post('/api/v1/messages', messageController.createMessage);
 router.get('/api/v1/messages', messageController.getAllMessages);
 router.get('/api/v1/messages/sent', messageController.getAllMessages);
 router.get('/api/v1/messages/unread', messageController.getAllMessages);
-router.get('/api/v1/messages/:id', messageController.getMessage);
+router.get('/api/v1/messages/:member_id', messageController.getMessage);
+router.delete('/api/v1/messages/:member_id', messageController.deleteMessage);
 
 export default router;

@@ -32,7 +32,7 @@ class MessageController {
         }
         
     getMessage(req, res) {
-          const id = parseInt(req.params.id, 10);
+          const id = parseInt(req.params.member_id, 10);
           const message = mail["messages"].find(message => message.id === id);
           if(message){return res.status(200).send({
             status: 200,
@@ -42,6 +42,30 @@ class MessageController {
             return res.status(400).send({
             status: 400,
             error: 'message does not exist',
+          });
+        }
+
+        deleteMessage(req, res) {
+          const id = parseInt(req.params.member_id, 10);
+          let messageFound;
+          let itemIndex;
+          mail["messages"].map((message, index) => {
+            if (message.id === id) {
+              messageFound = message;
+              itemIndex = index;
+            }
+          });
+          if (!messageFound) {
+            return res.status(400).send({
+              status: 400,
+              error: 'message not found',
+            });
+          }
+          const message = mail["messages"].splice(itemIndex, 1);
+      
+          return res.status(200).send({
+            status: 200,
+            data: message[0].message,
           });
         }
       

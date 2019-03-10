@@ -78,5 +78,29 @@ describe("EpicMail Endpoints", () => {
 		});
 	});
 
+	describe("DELETE /api/v1/messages/:id", () => {
+		it("should delete a message by the given id", (done) => {
+			const id = message["id"];
+			chai.request(app)
+				.delete(`/api/v1/messages/${id}`)
+				.end((err, res) => {
+					res.should.have.status(200);
+					res.body.should.be.a('object');
+					done();
+					});
+		});
+
+		it("should not delete a message when given a wrong member_id", (done) => {
+			const id = 4;
+			chai.request(app)
+				.delete(`/api/v1/messages/${id}`)
+				.end((err, res) => {
+					res.should.have.status(400);
+					res.body.should.be.a('object');
+					done();
+					});
+		});
+	});
+
 
 });
