@@ -1,7 +1,10 @@
+import 'dotenv/config';
 import express from "express";
 import router from "./Routes/index";
 
 const app = express();
+
+console.log(process.env.SECRET);
 
 app.use(router);
 
