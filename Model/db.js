@@ -9,7 +9,16 @@ const mails = {
         parentMessageId: 2,
         status: "sent"
     }
-]
+],
+
+    users: [{
+        id: 1,
+		email: "admin@yahoo.com",
+		firstName: "ayobami",
+		lastName: "Dangote",
+		password: "thisisandela"
+	
+    }]
 }
 
 export default mails;
