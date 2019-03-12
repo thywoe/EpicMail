@@ -8,7 +8,13 @@ class UserController {
 		if (!req.body.email) {
       return res.status(400).send({
         status: 400,
-        error: 'field is required',
+        error: 'Email field is required',
+      });
+    }
+    if (!req.body.password) {
+      return res.status(400).send({
+        status: 400,
+        error: 'Password field is required',
       });
     }
     const hashedPassword = bcrypt.hashSync(req.body.password, 10);
