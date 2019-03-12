@@ -14,7 +14,7 @@ describe("EpicMail Endpoints", () => {
 				firstName: "John",
 				lastName: "bola",
 				password: "12345"
-    };	
+    			};	
 			chai.request(app)
 				.post('/api/v1/auth/signup')
 				.send(user)
@@ -23,7 +23,40 @@ describe("EpicMail Endpoints", () => {
 					done();
 					});
 		});
-	});
 
+		it("should not create a user account when email field is missing ", (done) => {
+			const user = {
+			   id: 7,
+			   email: "",
+			   firstName: "John",
+			   lastName: "bola",
+			   password: "12345"
+   				};	
+		   chai.request(app)
+			   .post('/api/v1/auth/signup')
+			   .send(user)
+			   .end((err, res) => {
+				   res.should.have.status(400);
+				   done();
+				   });
+	   });
+
+	   it("should not create a user account when password field is missing ", (done) => {
+		const user = {
+		   id: 7,
+		   email: "seun@gmail.com",
+		   firstName: "John",
+		   lastName: "bola",
+		   password: ""
+			};	
+	   chai.request(app)
+		   .post('/api/v1/auth/signup')
+		   .send(user)
+		   .end((err, res) => {
+			   res.should.have.status(400);
+			   done();
+			   });
+   		});
+	});
 
 });
