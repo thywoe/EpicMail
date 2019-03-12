@@ -4,7 +4,6 @@ import router from "./Routes/index";
 
 const app = express();
 
-console.log(process.env.SECRET);
 
 app.use(router);
 
