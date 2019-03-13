@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-import mail from "../Model/db";
+import mail from "../dummy/db";
 
 
 class UserController {
@@ -35,6 +35,17 @@ class UserController {
     });
 
     }
+
+    loginUser(req, res){
+      const user = mail["users"].find(user => user.email === req.body.email);
+      if(!user){return res.status(404).send("email not found")};
+      const passwordIsValid = mail["users"].find(user => user.password === req.body.password);
+      if(!passwordIsValid){return res.status(401).send("password is invalid")};
+      const token = jwt.sign({id:user._id}, process.env.SECRET, {expiresIn: 86400});
+      res.status(200).send({token: token});			
+  }
+
+   
 }
 
 const userController = new UserController();

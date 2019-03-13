@@ -59,4 +59,48 @@ describe("EpicMail Endpoints", () => {
    		});
 	});
 
+	describe("POST /api/v1/auth/login", () => {
+		it("should allow user login", (done) => {
+			const user = {
+			   email: "admin@yahoo.com",
+			   password: "thisisandela",
+				};	
+		   chai.request(app)
+			   .post('/api/v1/auth/login')
+			   .send(user)
+			   .end((err, res) => {
+				   res.should.have.status(200);
+				   done();
+				   });
+			   });
+
+			   it("should not allow user log in when email is not found", (done) => {
+				const user = {
+				   email: " ",
+				   password: "thisisandela",
+					};	
+			   chai.request(app)
+				   .post('/api/v1/auth/login')
+				   .send(user)
+				   .end((err, res) => {
+					   res.should.have.status(404);
+					   done();
+					   });
+				   });
+
+				   it("should not allow user log in when pasword field is invalid", (done) => {
+					const user = {
+					   email: "admin@yahoo.com",
+					   password: " ",
+						};	
+				   chai.request(app)
+					   .post('/api/v1/auth/login')
+					   .send(user)
+					   .end((err, res) => {
+						   res.should.have.status(401);
+						   done();
+						   });
+					   });
+		});
+
 });

@@ -6,3 +6,6 @@ node_js:
 cache:
   directories:
     - "node_modules"
+
+After_success : npm run coverage
+     
