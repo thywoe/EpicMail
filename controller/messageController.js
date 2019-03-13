@@ -1,4 +1,4 @@
-import mail from "../Model/db";
+import mail from "../dummy/db";
 
 class MessageController {
 
