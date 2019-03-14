@@ -1,6 +1,9 @@
 {
   "name": "epicmail",
   "version": "1.0.0",
+  "engines": {
+    "node":"10.15.1"
+  },
   "description": "EpicMail a Web Application that allows User Write,Send, Save and Delete Email messages.",
   "main": "index.js",
   "dependencies": {
@@ -25,7 +28,8 @@
   },
   "scripts": {
     "test": "nyc mocha --require babel-register test/*.js --exit",
-    "start": "node_modules/.bin/nodemon server.js --exec babel-node --",
+    "start-dev": "node_modules/.bin/nodemon server.js --exec babel-node --",
+   
     "coverage":"nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
