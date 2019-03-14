@@ -47,14 +47,14 @@ class UserController {
           return res.status(400).send({ message: 'All fields are required' });
         }
         if (email !== fakeEmail || password !== fakePassword) {
-          return res.status(400).send({ message: 'Username or password is incorrect' });
+          return res.status(400).send({ message: 'Email or password is incorrect' });
         }
         if (email === fakeEmail || password === fakePassword) {
       const token = jwt.sign({email:email}, process.env.SECRET, {expiresIn: 86400});
       res.status(200).send({token: token});	
   }
 
-  return '';
+ 
 }
 }
 
