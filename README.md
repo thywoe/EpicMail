@@ -17,6 +17,21 @@ EpicMail a Web Application that allows User Write,Send, Save and Delete Email me
 * HTML
 * CSS
 * Javascript
+* Nodejs
+* Express
+* Postman (Test API routes)
+* Body-Parser
+* Jsonwebtoken
+* Babel
+* Bcryptsjs
 
 # GitHub Pages Link:
 https://thywoe.github.io/EpicMail/UI/index.html
+
+# Travis badge
+[![Build Status](https://travis-ci.org/thywoe/EpicMail.svg?branch=develop)](https://travis-ci.org/thywoe/EpicMail)
+
+# Coveralls badge
+[![Coverage Status](https://coveralls.io/repos/github/thywoe/EpicMail/badge.svg?branch=develop)](https://coveralls.io/github/thywoe/EpicMail?branch=develop)
+
+
