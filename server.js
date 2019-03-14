@@ -7,6 +7,18 @@ const app = express();
 
 app.use(router);
 
+app.get('/', (req, res) => {
+    return res.status(200).json({
+        status: 200,
+        data: [
+            {
+                message:"Logged in successful"
+            }
+        ]
+
+    });
+});
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
