@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
         status: 200,
         data: [
             {
-                message:"Logged in successful"
+                message:"WELCOME"
             }
         ]
 

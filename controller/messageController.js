@@ -3,12 +3,18 @@ import mail from "../dummy/db";
 class MessageController {
 
     createMessage(req, res) {
-        if (!req.body.subject || !req.body.message) {
+        if (!req.body.subject) {
             return res.status(400).send({
               status: 400,
-              error: 'All fields are required',
+              error: 'Subject field is empty',
             });
-          }      
+          }
+          if (!req.body.message) {
+            return res.status(400).send({
+              status: 400,
+              error: 'message field is empty',
+            });
+          }     
           const message = {
                   id: req.body.id,
                   createdOn : req.body.createdOn,
@@ -34,11 +40,12 @@ class MessageController {
     getMessage(req, res) {
           const id = parseInt(req.params.member_id, 10);
           const message = mail["messages"].find(message => message.id === id);
-          if(message){return res.status(200).send({
+          if(message){
+            return res.status(200).send({
             status: 200,
             data: message
           }
-          )};
+          )}
             return res.status(400).send({
             status: 400,
             error: 'message does not exist',
