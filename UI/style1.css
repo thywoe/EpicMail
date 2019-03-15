@@ -7,7 +7,7 @@ body {
 }
 
 #logo-design {
-  color: #63cdda;
+  color: #f0f4f5;
 }
 
 /*sidebar btn*/
@@ -87,7 +87,8 @@ body {
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  color: #2f3542;
+  background-color: #227093;
+  color: #ffffff;
   padding: 10px 15px;
   border: none;
   border-radius: 10px;
@@ -180,8 +181,8 @@ body {
 
 /*admin openbtn*/
 .adminbtn {
-  background-color: #f5f6fa;
-  color: #ff5e57;
+  background-color: #227093;
+  color: #ffffff;
 }
 
 #cg-bar a{
@@ -219,19 +220,22 @@ body {
 }
 
 #lg-bar {
-  margin-top: 100px;
-  font-weight: bold;
+  /* margin-top: 100px; */
+  font-weight: normal;
+  float: right;
+  text-decoration: none;
 }
 
 #lg-bar a{
   color: #2c3e50;
   font-family: sans-serif;
+  text-decoration: none;
 }
 
 #lg-bar a:hover {
   background-color: #33d9b2;
   color: #ecf0f1;
-  border-left: 6px solid #2c3e50;
+  /* border-left: 6px solid #2c3e50; */
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
