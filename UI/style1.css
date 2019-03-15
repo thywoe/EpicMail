@@ -3,7 +3,11 @@
 }
 
 body {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: Arial, "Times New Roman", Times, serif;
+}
+
+#logo-design {
+  color: #f0f4f5;
 }
 
 /*sidebar btn*/
@@ -14,20 +18,22 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #63cdda;
+  background-color: #2e86de;
   border-right: 2px solid grey;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  background-image: linear-gradient(#2e86de , #5352ed);
 }
 
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 1.3rem;
-  color: #eb2f06;
+  color: #ffbe76;
   display: block;
   transition: 0.3s;
+  font-weight: bolder;
 }
 
 .bar a:hover {
@@ -48,9 +54,8 @@ body {
  text-align: center;
 }
 
-#center h2 {
-   font-family: "Comic Sans MS", cursive, sans-serif;
-   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+#center h1 {
+   font-family: Arial, "Times New Roman", Times, serif;
    color: #f1f2f6;
 }
 
@@ -61,26 +66,29 @@ body {
 }
 
 #compose:hover {
-  box-shadow: 8px 8px 6px grey;
+  box-shadow: 5px 5px 3px black;
 }
 
 #compose a{
-  color: #ED4C67;
+  color: #ffbe76;
+  font-weight: bold;
 }
 
 #compose a:hover {
   color: white;
-  
   outline: none;
   border: none;
   text-decoration: none;
+  background-color: #227093;
+  border-radius: 15px;
 }
 
 /*open button*/
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  color: #2f3542;
+  background-color: #227093;
+  color: #ffffff;
   padding: 10px 15px;
   border: none;
   border-radius: 10px;
@@ -88,7 +96,6 @@ body {
 }
 
 .openbtn:hover {
-  /*background-color: #444;*/
   outline: none;
   box-shadow: 4px 4px 3px grey; 
 }
@@ -174,8 +181,8 @@ body {
 
 /*admin openbtn*/
 .adminbtn {
-  background-color: #f5f6fa;
-  color: #ff5e57;
+  background-color: #227093;
+  color: #ffffff;
 }
 
 #cg-bar a{
@@ -184,7 +191,6 @@ body {
 }
 
 #cg-bar a:hover {
-  font-family: cursive;
   background-color: #33d9b2;
   color: #2c3e50;
   border-left: 6px solid white;
@@ -214,19 +220,22 @@ body {
 }
 
 #lg-bar {
-  margin-top: 150px;
+  /* margin-top: 100px; */
+  font-weight: normal;
+  float: right;
+  text-decoration: none;
 }
 
 #lg-bar a{
   color: #2c3e50;
   font-family: sans-serif;
+  text-decoration: none;
 }
 
 #lg-bar a:hover {
-  font-family: cursive;
   background-color: #33d9b2;
   color: #ecf0f1;
-  border-left: 6px solid #2c3e50;
+  /* border-left: 6px solid #2c3e50; */
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
