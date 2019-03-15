@@ -1,4 +1,10 @@
+
+
+
+
 const mails = {
+
+   
     messages : [{
         id: 1,
         createdOn: 2009,
@@ -12,11 +18,11 @@ const mails = {
 ],
 
     users: [{
-        id: 1,
-		email: "admin@yahoo.com",
-		firstName: "ayobami",
-		lastName: "Dangote",
-		password: "thisisandela"
+        'id': 1,
+		'email': "admin@yahoo.com",
+		'firstName': "ayobami",
+		'lastName': "Dangote",
+		'password': "john"
 	
     }]
 }

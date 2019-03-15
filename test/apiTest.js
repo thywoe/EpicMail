@@ -6,6 +6,7 @@ chai.use(chaiHttp);
 const should = chai.should();
 
 describe("EpicMail Endpoints", () => {
+	
 	const message = {
 		id: 1,
 		createdOn : 2020,
@@ -26,6 +27,47 @@ describe("EpicMail Endpoints", () => {
 					done();
 					});
 		});
+
+		it("should not post a message when subject field is empty", (done) => {
+			const message = {
+				id: 1,
+				createdOn : 2020,
+				subject: "",
+				message: "Hello World",
+				parentMessageId: 5,
+				status: "read",
+				};
+
+			chai.request(app)
+				.post(`/api/v1/messages`)
+				.send(message)
+				.end((err, res) => {
+					res.should.have.status(400);
+					done();
+					});
+		});
+
+		it("should not post a message when message field is empty", (done) => {
+			const message = {
+				id: 1,
+				createdOn : 2020,
+				subject: "Address",
+				message: "",
+				parentMessageId: 5,
+				status: "read",
+				};
+
+			chai.request(app)
+				.post(`/api/v1/messages`)
+				.send(message)
+				.end((err, res) => {
+					res.should.have.status(400);
+					done();
+					});
+		});
+
+
+
     });
     
     describe("GET /api/v1/messages", () => {
@@ -76,6 +118,17 @@ describe("EpicMail Endpoints", () => {
 					done();
 					});
 		});
+
+		it("should not get a message when given a wrong id", (done) => {
+			const id = message[2];
+			chai.request(app)
+				.get(`/api/v1/messages/${id}`)
+				.end((err, res) => {
+					res.should.have.status(400);
+					res.body.should.be.a('object');
+					done();
+					});
+		});
 	});
 
 	describe("DELETE /api/v1/messages/:id", () => {
@@ -101,6 +154,18 @@ describe("EpicMail Endpoints", () => {
 					});
 		});
 	});
+
+	describe("GET /", () => {
+		it("should return a welcome message", (done) => {
+			chai.request(app)
+				.get('/')
+				.end((err, res) => {
+					res.should.have.status(200);
+					res.body.should.be.a('object');
+					done();
+					});
+		});
+    });
 
 
 });
