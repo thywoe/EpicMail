@@ -8,11 +8,23 @@ const app = express();
 app.use(router);
 
 app.get('/', (req, res) => {
-    return res.status(200).json({
+     res.status(200).send({
         status: 200,
         data: [
             {
                 message:"WELCOME"
+            }
+        ]
+
+    });
+});
+
+app.get('*', (req, res) => {
+     res.status(404).send({
+        status: 404,
+        data: [
+            {
+                message:"Url does not exist"
             }
         ]
 

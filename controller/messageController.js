@@ -16,7 +16,7 @@ class MessageController {
             });
           }     
           const message = {
-                  id: req.body.id,
+                  id: mail["messages"].length + 1,
                   createdOn : req.body.createdOn,
                   subject: req.body.subject,
                   message: req.body.message,
@@ -34,6 +34,20 @@ class MessageController {
           return res.status(200).send({
             status: 200,
             data: mail["messages"],
+          });
+        }
+
+        getAllSentMessages(req, res) {
+          return res.status(200).send({
+            status: 200,
+            data: mail["sentMessages"],
+          });
+        }
+
+        getAllUnreadMessages(req, res) {
+          return res.status(200).send({
+            status: 200,
+            data: mail["unread"],
           });
         }
         
@@ -74,11 +88,7 @@ class MessageController {
             status: 200,
             data: message[0].message,
           });
-        }
-      
-
-
-
+        }     
 
     }
 const messageController = new MessageController();
