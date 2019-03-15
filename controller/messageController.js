@@ -47,7 +47,7 @@ class MessageController {
         getAllUnreadMessages(req, res) {
           return res.status(200).send({
             status: 200,
-            data: mail["unread"],
+            data: mail["unreadMessages"],
           });
         }
         
