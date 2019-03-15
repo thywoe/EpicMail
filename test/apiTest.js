@@ -165,6 +165,17 @@ describe("EpicMail Endpoints", () => {
 					done();
 					});
 		});
+	});
+	
+	describe("GET wrong url", () => {
+		it("should return an error message", (done) => {
+			chai.request(app)
+				.get('/23e')
+				.end((err, res) => {
+					res.should.have.status(404);
+					done();
+					});
+		});
     });
 
 

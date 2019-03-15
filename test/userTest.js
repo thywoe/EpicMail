@@ -9,11 +9,11 @@ describe("EpicMail Endpoints", () => {
     describe("POST /api/v1/auth/signup", () => {
 		it("should create a user account", (done) => {
 			 const user = {
-    			id: 7,
-    			email: "seun@gmail.com",
-				firstName: "John",
-				lastName: "bola",
-				password: "12345"
+    			id: 1,
+    			email: "admin@yahoo.com",
+				firstName: "ayobami",
+				lastName: "dangote",
+				password: "thisisandela"
     			};	
 			chai.request(app)
 				.post('/api/v1/auth/signup')
@@ -26,11 +26,11 @@ describe("EpicMail Endpoints", () => {
 
 		it("should not create a user account when email field is missing ", (done) => {
 			const user = {
-			   id: 7,
+			   id: 1,
 			   email: "",
-			   firstName: "John",
-			   lastName: "bola",
-			   password: "12345"
+			   firstName: "ayobami",
+			   lastName: "dangote",
+			   password: "thisisandela"
    				};	
 		   chai.request(app)
 			   .post('/api/v1/auth/signup')
@@ -43,11 +43,11 @@ describe("EpicMail Endpoints", () => {
 
 	   it("should not create a user account when password field is missing ", (done) => {
 		const user = {
-		   id: 7,
+		   id: 1,
 		   email: "seun@gmail.com",
-		   firstName: "John",
-		   lastName: "bola",
-		   password: ""
+		   firstName: "ayobami",
+		   lastName: "dangote",
+		   password: " "
 			};	
 	   chai.request(app)
 		   .post('/api/v1/auth/signup')
@@ -61,7 +61,7 @@ describe("EpicMail Endpoints", () => {
 
 	describe("POST /api/v1/auth/login", () => {
 		it("should allow user login", (done) => {
-			const user = {
+			const user= {
 			   email: "admin@yahoo.com",
 			   password: "thisisandela",
 				};	
@@ -76,7 +76,7 @@ describe("EpicMail Endpoints", () => {
 
 			   it("should not allow user log in when email is not found", (done) => {
 				const user = {
-				   email: " ",
+				   email: "tayo@gmail.com",
 				   password: "thisisandela",
 					};	
 			   chai.request(app)
@@ -91,7 +91,7 @@ describe("EpicMail Endpoints", () => {
 				   it("should not allow user log in when pasword field is invalid", (done) => {
 					const user = {
 					   email: "admin@yahoo.com",
-					   password: " ",
+					   password: "1234",
 						};	
 				   chai.request(app)
 					   .post('/api/v1/auth/login')
