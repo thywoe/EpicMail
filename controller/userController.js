@@ -26,7 +26,7 @@ class UserController {
 		password: req.body.password
     };
     mail["users"].push(user);
-    const token = jwt.sign({id:user._id}, process.env.SECRET, {expiresIn: 86400});
+    const token = jwt.sign({id:user_id}, process.env.SECRET, {expiresIn: 86400});
         res.status(200).send({
     	status: 200,
     	data: {
@@ -37,24 +37,12 @@ class UserController {
     }
 
     loginUser(req, res){
-
-      const email = req.body.email;
-        const password = req.body.password;
-        const fakeEmail = 'thywo@gmail.com';
-        const fakePassword = 'john';
-
-        if (!email || !password) {
-          return res.status(400).send({ message: 'All fields are required' });
-        }
-        if (email !== fakeEmail || password !== fakePassword) {
-          return res.status(400).send({ message: 'Email or password is incorrect' });
-        }
-        if (email === fakeEmail || password === fakePassword) {
-      const token = jwt.sign({email:email}, process.env.SECRET, {expiresIn: 86400});
-      res.status(200).send({token: token});	
-  }
-
- 
+      const user = mail["users"].find(user => user.email === req.body.email);
+		if(!user){return res.status(404).send("user not found")};
+		const passwordIsValid = mail["users"].find(user => user.password === req.body.password);
+		if(!passwordIsValid){return res.status(401).send("password is invalid")};
+		const token = jwt.sign({id:user_id}, secret.SECRET, {expiresIn: 86400});
+		res.status(200).send({token: token});	
 }
 }
 
